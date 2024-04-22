@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="bg-gray-900 flex mx-auto min-h-screen">
+
+        <!-- left sidebar -->
+        <div class="flex flex-col items-center w-72 px-5 border-gray-700">
+
+            <!-- logo -->
+            <div class="flex h-14 mt-10">
+                <span>
+                    <i class="fa-brands fa-twitter text-twitterBlue text-3xl hover:text-blue-700 cursor-pointer hover:scale-150"></i>
+                </span>
+            </div>
+
+            <!-- buttons -->
+            <div class="flex flex-col space text-white text-xl font-bold space-y-2">
+                <div class="nav-btns nav-btns-selected">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden xl:inline">Home</span>
+                </div>
+                <div class="nav-btns">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span class="hidden xl:inline">Explore</span>
+                </div>
+                <div class="nav-btns">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="hidden xl:inline">Notifications</span>
+                </div>
+                <div class="nav-btns">
+                    <i class="fa-solid fa-message"></i>
+                    <span class="hidden xl:inline">Message</span>
+                </div>
+                <div class="nav-btns">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden xl:inline">Bookmarks</span>
+                </div>
+                <div class="nav-btns">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="hidden xl:inline">Profils</span>
+                </div>
+                <div class="nav-btns">
+                    <i class="fa-solid fa-angle-right"></i>
+                    <span class="hidden xl:inline">More</span>
+                </div>
+            </div>
+
+
+            <a href="" class="w-full bg-twitterBlue rounded-full text-center py-2 text-white text-xl font-bold hover:bg-blue-700 mt-20 duration-500">Tweet</a>
+
+            
+        </div>
+
+        <div class="flex flex-col lg:flex-row w-full border-l border-gray-700">
+            <!-- Main Section -->
+            <div class="flex-grow border-r border-gray-700">
+
+                <div class="flex items-center justify-between lg:justify-center p-5 border-b border-gray-700">
+                    <h1 class="text-4xl font-bold font-serif text-twitterWhite">Home</h1>
+                    <div class="flex items-center justify-start bg-gray-700 rounded-2xl pl-3 lg:hidden lg:w-full">
+                        <div id="search-icon">
+                            <i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>
+                        </div>
+                        <input type="text" name="" id="search-input" placeholder="Search" onkeyup="content_change(this.value)"
+                        class="w-full py-2 px-4 bg-transparent text-lg text-twitterWhite focus:outline-none placeholder:text-xl">
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-8 p-4 border-b border-gray-700">
+                    <img src="img.jpg" alt="" class="rounded-full cursor-pointer w-16 h-16">
+                    <textarea name="" id="" rows="2" placeholder="What's happening ?" 
+                    class="bg-gray-600 w-full rounded-xl border border-white text-twitterWhite text-sm p-3 placeholder:text-md focus:outline-none "></textarea>
+                </div>
+
+                <div class="flex items-center justify-between p-5 border-b border-gray-700 space-x-2">
+                    <div class="flex items-center">
+                        <div class="hover:bg-gray-600 rounded-full h-12 w-12 flex justify-center items-center duration-200">
+                            <i class="fa-solid fa-image text-twitterBlue text-3xl"></i>
+                        </div>
+                        <div class="hover:bg-gray-600 rounded-full h-12 w-12 flex justify-center items-center duration-200">
+                            <i class="fa-solid fa-face-smile text-twitterBlue text-3xl"></i>
+                        </div>
+                        <div class="hover:bg-gray-600 rounded-full h-12 w-12 flex justify-center items-center duration-200">
+                            <i class="fa-solid fa-clipboard-list text-twitterBlue text-3xl"></i>
+                        </div>
+                        <div class="hover:bg-gray-600 rounded-full h-12 w-12 flex justify-center items-center duration-200">
+                            <i class="fa-solid fa-box-archive text-twitterBlue text-3xl"></i>
+                        </div>
+                    </div>
+                    <a href="" class="bg-twitterBlue rounded-full text-center py-2 text-white text-xl font-bold hover:bg-blue-700 duration-500 w-52">Tweet</a>
+                </div>
+                <div class="min-h-56"></div>
+
+            </div>
+
+
+            <!-- right sidebar -->
+            <div class="lg:w-[500px] w-full p-3">
+                <div class="mb-5 lg:flex items-center justify-start bg-gray-700 rounded-2xl pl-3 hidden ">
+                    <div id="search-icon">
+                        <i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>
+                    </div>
+                    <input type="text" name="" id="search-input" placeholder="Search" onkeyup="content_change(this.value)"
+                    class="w-full py-2 px-4 bg-transparent text-lg text-twitterWhite focus:outline-none placeholder:text-xl">
+                </div>
+                <div class="info-section">
+                    <h1 class="mb-4 text-2xl font-bold font-mono">What's Happening</h1>
+                    <p class="font-medium text-lg mb-4">web development</p>
+                    <div class="flex justify-between mb-10">
+                        <div>
+                            <p class="font-bold text-xl mb-4">Tailwind css the modern css framework</p>
+                            <p class="font-medium text-lg mb-4">Trending with</p>
+                            <p class="font-medium text-lg mb-4 text-twitterBlue">#Tailwindcss #ReactJs</p>
+                        </div>
+                        <img src="tailwind.jpg" alt="" class="h-20 w-20 rounded-2xl">
+                    </div>
+                    <p class="font-medium text-lg mb-4">web development</p>
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="font-bold text-xl mb-4">Tailwind css the modern css framework</p>
+                            <p class="font-medium text-lg mb-4">Trending with</p>
+                            <p class="font-medium text-lg mb-4 text-twitterBlue">#Tailwindcss #ReactJs</p>
+                        </div>
+                        <img src="react.png" alt="" class="h-20 w-20 rounded-2xl">
+                    </div>
+
+                </div>
+                <div class="info-section">
+                    <h1 class="mb-4 text-2xl font-bold font-mono">You might like</h1>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-5">
+                            <img src="react.png" alt="" class="h-14 w-14 rounded-full">
+                            <div class="flex flex-col justify-start">
+                                <p class="text-white font-bold text-xl">Reactjs</p>
+                                <p class="text-gray-500 font-medium text-lg">@Reactjs</p>
+                            </div>
+                        </div>
+                        <button class="font-black text-white bg-twitterBlue rounded-3xl py-1 px-6 hover:bg-blue-600 duration-200">Follow</button>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <img src="tailwind.jpg" alt="" class="h-14 w-14 rounded-full">
+                            <div class="flex flex-col justify-start">
+                                <p class="text-white font-bold text-xl">Tailwindcss</p>
+                                <p class="text-gray-500 font-medium text-lg">@Tailwindcss</p>
+                            </div>
+                        </div>
+                        <button class="font-black text-white bg-twitterBlue rounded-3xl py-1 px-6 hover:bg-blue-600 duration-500">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+<script>
+    function content_change(value){
+        if(value == ''){
+            document.getElementById('search-icon').innerHTML = '<i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>';
+        } else {
+            document.getElementById('search-icon').innerHTML = '<i class="fa-solid fa-x text-twitterWhite text-lg cursor-pointer" onclick="empty_content()"></i>';
+        }
+    }
+    function empty_content(){
+        document.getElementById('search-input').value = '';
+        document.getElementById('search-icon').innerHTML = '<i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>';
+    }
+</script>
+</html>

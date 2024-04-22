@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav-btns{
+    @apply flex items-center space-x-3 py-2 px-3 rounded-full cursor-pointer hover:bg-twitterWhite hover:bg-opacity-10 transition duration-500 ease-out hover:scale-105
+}
+
+.nav-btns-selected{
+    @apply bg-twitterWhite bg-opacity-10
+}
+
+.info-section{
+    @apply bg-gray-700 rounded-3xl px-6 py-3 text-left text-white tracking-wide leading-9 mb-5
+}

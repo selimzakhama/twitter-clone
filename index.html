@@ -66,7 +66,7 @@
                 <div class="flex items-center justify-between lg:justify-center p-5 border-b border-gray-700">
                     <h1 class="text-4xl font-bold font-serif text-twitterWhite">Home</h1>
                     <div class="flex items-center justify-start bg-gray-700 rounded-2xl pl-3 lg:hidden lg:w-full">
-                        <div id="search-icon">
+                        <div id="search-icon2">
                             <i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>
                         </div>
                         <input type="text" name="" id="search-input" placeholder="Search" onkeyup="content_change(this.value)"
@@ -108,7 +108,7 @@
                     <div id="search-icon">
                         <i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>
                     </div>
-                    <input type="text" name="" id="search-input" placeholder="Search" onkeyup="content_change(this.value)"
+                    <input type="text" name="" id="search-input2" placeholder="Search" onkeyup="content_change(this.value)"
                     class="w-full py-2 px-4 bg-transparent text-lg text-twitterWhite focus:outline-none placeholder:text-xl">
                 </div>
                 <div class="info-section">
@@ -168,13 +168,17 @@
     function content_change(value){
         if(value == ''){
             document.getElementById('search-icon').innerHTML = '<i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>';
+            document.getElementById('search-icon2').innerHTML = '<i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>';
         } else {
             document.getElementById('search-icon').innerHTML = '<i class="fa-solid fa-x text-twitterWhite text-lg cursor-pointer" onclick="empty_content()"></i>';
+            document.getElementById('search-icon2').innerHTML = '<i class="fa-solid fa-x text-twitterWhite text-lg cursor-pointer" onclick="empty_content()"></i>';
         }
     }
     function empty_content(){
         document.getElementById('search-input').value = '';
         document.getElementById('search-icon').innerHTML = '<i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>';
+        document.getElementById('search-input2').value = '';
+        document.getElementById('search-icon2').innerHTML = '<i class="fa-solid fa-magnifying-glass text-twitterWhite text-lg"></i>';
     }
 </script>
 </html>

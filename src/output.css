@@ -651,6 +651,14 @@ video {
   width: 3.5rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
+.min-w-24 {
+  min-width: 6rem;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -1057,5 +1065,9 @@ video {
 @media (min-width: 1280px) {
   .xl\:inline {
     display: inline;
+  }
+
+  .xl\:w-full {
+    width: 100%;
   }
 }
